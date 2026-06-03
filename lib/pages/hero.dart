@@ -82,17 +82,12 @@ class Hero extends StatelessComponent {
                     height: 48,
                     width: 48,
                   ),
-                  span(
-                    classes: "swiftUI_wrapper",
-                    [
-                      img(
+
+                  img(
                     classes: "img_social swiftUI",
                     src: AppImages.swiftUI,
                     height: 48,
                     width: 48,
-                  ),
-                      span(classes: 'swiftUI_YOE', [.text("SwiftUI with 0.6 YOE")]),
-                    ],
                   ),
                 ]),
               ],
@@ -293,33 +288,5 @@ class Hero extends StatelessComponent {
         right: 2.em,
       ),
     ),
-
-    css('.swiftUI_YOE').styles(
-      position: .absolute(
-        top: 6.5.em,
-        right: 2.em,
-      ),
-      // zIndex: ZIndex(1),
-      padding: Spacing.all(5.px),
-      radius: BorderRadius.circular(8.px),
-      opacity: 0,
-      visibility: .hidden,
-      color: Colors.white,
-      fontSize: 12.px,
-      fontWeight: .w400,
-      backgroundColor: Colors.black.withOpacity(0.7),
-      raw: {
-        '-webkit-text-fill-color': 'white',
-        '-webkit-background-clip': 'initial',
-        'background-clip': 'initial',
-        'transition': 'all 0.3s ease',
-      },
-    ),
-
-    css('.swiftUI_wrapper:hover .swiftUI_YOE').styles(
-      opacity: 1,
-      visibility: .visible,
-    ),
-
   ];
 }

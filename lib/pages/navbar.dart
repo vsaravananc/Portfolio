@@ -50,6 +50,7 @@ class Navbar extends StatelessComponent {
     css(".nav_header").styles(
       display: .flex,
       position: .sticky(top: 0.px),
+      zIndex: ZIndex(100),
       width: 100.percent,
       height: 65.px,
       border: Border.only(
