@@ -3,6 +3,7 @@ import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_portfolio/constants/images.dart';
 import 'package:jaspr_portfolio/pages/hero.dart';
 import 'package:jaspr_portfolio/pages/navbar.dart';
+import 'package:jaspr_portfolio/pages/shortcontent.dart';
 
 import 'pages/about.dart';
 import 'pages/home.dart';
@@ -45,6 +46,7 @@ class AppState extends State<App> {
     return div(classes: 'main', [
       const Navbar(),
       const Hero(),
+      const Shortcontent(),
       const Home(),
       const About(),
       div(

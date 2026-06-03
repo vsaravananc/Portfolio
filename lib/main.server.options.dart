@@ -10,6 +10,7 @@ import 'package:jaspr_portfolio/constants/theme.dart' as _theme;
 import 'package:jaspr_portfolio/pages/about.dart' as _about;
 import 'package:jaspr_portfolio/pages/hero.dart' as _hero;
 import 'package:jaspr_portfolio/pages/navbar.dart' as _navbar;
+import 'package:jaspr_portfolio/pages/shortcontent.dart' as _shortcontent;
 import 'package:jaspr_portfolio/app.dart' as _app;
 
 /// Default [ServerOptions] for use with your Jaspr project.
@@ -38,5 +39,6 @@ ServerOptions get defaultServerOptions => ServerOptions(
     ..._about.About.styles,
     ..._hero.Hero.styles,
     ..._navbar.Navbar.styles,
+    ..._shortcontent.Shortcontent.styles,
   ],
 );
