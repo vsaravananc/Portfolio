@@ -7,7 +7,6 @@
 import 'package:jaspr/server.dart';
 import 'package:jaspr_portfolio/components/count_higlight.dart'
     as _count_higlight;
-import 'package:jaspr_portfolio/components/counter.dart' as _counter;
 import 'package:jaspr_portfolio/constants/theme.dart' as _theme;
 import 'package:jaspr_portfolio/pages/about.dart' as _about;
 import 'package:jaspr_portfolio/pages/hero.dart' as _hero;
@@ -38,7 +37,6 @@ ServerOptions get defaultServerOptions => ServerOptions(
     ..._theme.styles,
     ..._app.AppState.styles,
     ..._count_higlight.CountHiglight.styles,
-    ..._counter.CounterState.styles,
     ..._about.About.styles,
     ..._hero.Hero.styles,
     ..._navbar.Navbar.styles,

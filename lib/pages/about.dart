@@ -6,39 +6,68 @@ class About extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return const section([
-      ol([
-        li([
-          h3([.text('📖 Documentation')]),
-          .text('Jaspr\'s '),
-          a(href: 'https://docs.jaspr.site', [.text('official documentation')]),
-          .text(' provides you with all information you need to get started.'),
+    return div(
+      classes: "about",
+      [
+        div(classes: 'about_div container', [
+          div(
+            classes: 'align_center profile',
+            [
+              h2(
+                classes: "about_me",
+                [
+                  .text(" About Me"),
+                ],
+              ),
+            ],
+          ),
+          p(
+            classes: 'align_center',
+            styles: Styles(
+              padding: .only(left: 20.px),
+              fontFamily: FontFamily('Roboto'),
+              fontSize: 1.8.rem,
+            ),
+            [
+              .text(
+                "Passionate about building scalable digital products, turning complex requirements into simple, intuitive experiences through thoughtful architecture and problem solving",
+              ),
+            ],
+          ),
         ]),
-        li([
-          h3([.text('💬 Community')]),
-          .text('Got stuck? Ask your question on the official '),
-          a(href: 'https://discord.gg/XGXrGEk4c6', [.text('Discord server')]),
-          .text(' for the Jaspr community.'),
-        ]),
-        li([
-          h3([.text('📦 Ecosystem')]),
-          .text(
-              'Get official packages and integrations for your project like jaspr_router, jaspr_tailwind or jaspr_riverpod. Find packages built for Jaspr on pub.dev using the '),
-          a(href: 'https://pub.dev/packages?q=topic%3Ajaspr', [.text('#jaspr')]),
-          .text(' topic, or publish your own.'),
-        ]),
-        li([
-          h3([.text('💙 Support Jaspr')]),
-          .text('If you like Jaspr, consider starring us on '),
-          a(href: 'https://github.com/schultek/jaspr', [.text('Github')]),
-          .text(' and tell your friends.'),
-        ]),
-      ]),
-    ]);
+      ],
+    );
   }
 
   @css
   static List<StyleRule> get styles => [
-    css('ol').styles(maxWidth: 500.px),
+    css('.about').styles(height: 360.px, backgroundColor: Colors.white),
+    css(".about_div").styles(
+      display: .grid,
+      height: 100.percent,
+      gridTemplate: GridTemplate(
+        columns: GridTracks(
+          [
+            GridTrack(TrackSize(30.percent)),
+            GridTrack(TrackSize.auto),
+          ],
+        ),
+      ),
+    ),
+    css('.about_me').styles(
+      padding: .symmetric(horizontal: 8.px, vertical: 2.px),
+      margin: .unset,
+      radius: BorderRadius.circular(999.px),
+      transform: Transform.rotate(345.deg),
+      fontFamily: FontFamily('Pixelify Sans'),
+      fontSize: 14.px,
+      fontWeight: FontWeight.w500,
+      backgroundColor: Colors.gray.withOpacity(0.3)
+    ),
+    css(".profile").styles(
+      width: 100.percent,
+      height: 100.percent
+    ),
+    css(".align_center").styles(display: .flex, alignItems: .center)
   ];
 }

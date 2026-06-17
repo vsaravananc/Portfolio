@@ -16,7 +16,7 @@ class Navbar extends StatelessComponent {
             p(
               classes: 'nav_title',
               [
-                .text("Flutter Developer"),
+                .text("Mobile Developer"),
               ],
             ),
             ul(

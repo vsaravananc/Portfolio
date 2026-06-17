@@ -6,7 +6,6 @@ import 'package:jaspr_portfolio/pages/navbar.dart';
 import 'package:jaspr_portfolio/pages/shortcontent.dart';
 
 import 'pages/about.dart';
-import 'pages/home.dart';
 
 // The main component of your application.
 //
@@ -47,7 +46,6 @@ class AppState extends State<App> {
       const Navbar(),
       const Hero(),
       const Shortcontent(),
-      const Home(),
       const About(),
       div(
         classes: "background",

@@ -4,6 +4,7 @@ import 'package:jaspr_portfolio/constants/color.dart';
 @css
 List<StyleRule> get styles => [
   css.import('https://fonts.googleapis.com/css?family=Roboto'),
+  css.import('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap'),
   css('*, *::before, *::after').styles(boxSizing: .borderBox),
   css('html, body').styles(
     width: 100.percent,
