@@ -132,6 +132,13 @@ class Hero extends StatelessComponent {
       display: .flex,
       position: .relative(),
       width: 100.percent,
+      animation: Animation(
+        name: 'fadeIn',
+        duration: const Duration(milliseconds: 450),
+        curve: .ease,
+
+      ),
+      transition: Transition("all", duration: Duration(milliseconds: 450)),
       justifyContent: .center,
       alignItems: .center,
       backgroundColor: AppColors.background,
@@ -142,6 +149,20 @@ class Hero extends StatelessComponent {
         'background-image': 'url(images/kolam-bg.svg)',
         'background-repeat': 'repeat',
         'background-size': '160px 160px',
+      },
+    ),
+
+    css.keyframes(
+      'fadeIn',
+      {
+        '10%': Styles(
+          opacity: 0.5,
+          transform: Transform.translate(y: 20.px),
+        ),
+        '100%': Styles(
+          opacity: 1,
+          transform: Transform.translate(y: 0.px),
+        ),
       },
     ),
     css('.hero_main').styles(
