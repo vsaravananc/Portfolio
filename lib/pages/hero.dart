@@ -167,7 +167,7 @@ class Hero extends StatelessComponent {
     ),
     css('.hero_greeting').styles(display: .flex, flexDirection: .row, gap: Gap.column(8.px)),
     css('.hero_content_text').styles(
-      fontSize: 1.rem,
+      fontSize: 1.1.rem,
       fontWeight: .w400,
       lineHeight: 1.57.rem,
     ),

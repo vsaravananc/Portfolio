@@ -9,3 +9,6 @@ clean:
 
 run:
 	jaspr serve
+
+both:
+	 make clean & make run

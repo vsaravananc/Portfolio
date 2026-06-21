@@ -18,4 +18,5 @@ abstract final class AppImages {
   static const swift = 'images/swift.svg';
   static const swiftUI = 'images/swiftUI.svg';
   static const buildWith = "images/builtwithjaspr.svg";
+  static const profile = 'images/profile.jpeg';
 }

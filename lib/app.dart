@@ -48,6 +48,14 @@ class AppState extends State<App> {
       const Shortcontent(),
       const About(),
       div(
+        styles: Styles(
+          width: 100.percent,
+          height: 900.px,
+          backgroundColor: Colors.black,
+        ),
+        []
+      ),
+      div(
         classes: "background",
         [
           img(
