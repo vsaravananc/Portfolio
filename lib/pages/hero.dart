@@ -132,12 +132,7 @@ class Hero extends StatelessComponent {
       display: .flex,
       position: .relative(),
       width: 100.percent,
-      animation: Animation(
-        name: 'fadeIn',
-        duration: const Duration(milliseconds: 450),
-        curve: .ease,
-
-      ),
+    
       transition: Transition("all", duration: Duration(milliseconds: 450)),
       justifyContent: .center,
       alignItems: .center,

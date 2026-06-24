@@ -1,6 +1,7 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_portfolio/constants/images.dart';
+import 'package:jaspr_portfolio/pages/footer.dart';
 import 'package:jaspr_portfolio/pages/hero.dart';
 import 'package:jaspr_portfolio/pages/navbar.dart';
 import 'package:jaspr_portfolio/pages/shortcontent.dart';
@@ -23,38 +24,15 @@ class App extends StatefulComponent {
 }
 
 class AppState extends State<App> {
-  @override
-  void initState() {
-    super.initState();
-    // Run code depending on the rendering environment.
-    if (kIsWeb) {
-      print("Hello client");
-      // When using @client components there is no default `main()` function on the client where you would normally
-      // run any client-side initialization logic. Instead you can put it here, considering this component is only
-      // mounted once at the root of your client-side component tree.
-    } else {
-      print("Hello server");
-    }
-  }
 
   @override
   Component build(BuildContext context) {
-    // This method is rerun every time the component is rebuilt.
-
-    // Renders a <div class="main"> html element with children.
     return div(classes: 'main', [
       const Navbar(),
       const Hero(),
       const Shortcontent(),
       const About(),
-      div(
-        styles: Styles(
-          width: 100.percent,
-          height: 900.px,
-          backgroundColor: Colors.black,
-        ),
-        []
-      ),
+      const FooterComponent(),
       div(
         classes: "background",
         [
@@ -64,6 +42,7 @@ class AppState extends State<App> {
           ),
         ],
       ),
+   
     ]);
   }
 
@@ -71,10 +50,11 @@ class AppState extends State<App> {
   static List<StyleRule> get styles => [
     css(".main").styles(
       display: .block,
+      position: .relative()
     ),
     css('.background').styles(
       display: .flex,
-      position: .sticky(bottom: 0.px),
+      position: .fixed(bottom: 0.px, left: 0.px, right: 0.px),
       height: 55.px,
       padding: Spacing.symmetric(
         horizontal: 24.px,
